@@ -1,5 +1,7 @@
 {
   "name": "xtodo",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

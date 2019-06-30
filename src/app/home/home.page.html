@@ -1,14 +1,21 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      xNotes
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <ion-list>
+      <ion-item *ngFor="let note of notes | async" (click)="getNote(note.createdDate)">
+        {{note.title}}
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="addNote()">Add Note</ion-button>
   </div>
 </ion-content>
+<ion-footer>
+#developed by sachin_b_shelke_app_vTest
+</ion-footer>
